@@ -21,8 +21,8 @@ A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuy
     ```
 
 3. Add the component to your Vue component.
-```vue
-<template>
-  <AnimatedCheckmark></AnimatedCheckmark>
-</template>
-```
+    ```vue
+    <template>
+      <AnimatedCheckmark></AnimatedCheckmark>
+    </template>
+    ```
