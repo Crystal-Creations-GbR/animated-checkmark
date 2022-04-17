@@ -4,7 +4,7 @@ A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuy
 ## Usage
 1. Install with
 
-   `npm install @crystal-creations/animated-checkmark@https://github.com/Crystal-Creations-GbR/animated-checkmark`
+   `npm install @crystal-creations/animated-checkmark`
 
 2. Add the following to your Vue `main.ts`.
     ```ts
