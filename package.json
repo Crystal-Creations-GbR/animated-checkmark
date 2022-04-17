@@ -20,7 +20,7 @@
   ],
   "main": "src/AnimatedCheckmark.vue",
   "module": "src/AnimatedCheckmark.vue",
-  "repository": "https://github.com/Crystal-Creations-GbR/servely-animated-checkmark",
+  "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "dependencies": {
     "vue-property-decorator": "^9.1.2"
   },
