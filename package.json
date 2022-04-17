@@ -1,6 +1,6 @@
 {
   "name": "@crystal-creations/animated-checkmark",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "author": "Crystal Creations GbR and jojomatik",
   "license": "MIT",
   "description": "A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts",
