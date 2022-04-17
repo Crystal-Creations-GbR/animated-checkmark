@@ -5,7 +5,8 @@
   "license": "MIT",
   "description": "A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts",
   "scripts": {
-    "lint": "eslint src/** --max-warnings 0"
+    "lint": "eslint src/** --max-warnings 0",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "checkmark",
