@@ -1,0 +1,38 @@
+{
+  "name": "@crystal-creations/animated-checkmark",
+  "version": "0.0.0",
+  "author": "Crystal Creations GbR and jojomatik",
+  "license": "MIT",
+  "description": "A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts",
+  "scripts": {
+    "lint": "eslint src/** --max-warnings 0"
+  },
+  "keywords": [
+    "checkmark",
+    "animated",
+    "success"
+  ],
+  "homepage": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
+  "bugs": "https://github.com/Crystal-Creations-GbR/animated-checkmark/issues",
+  "files": [
+    "src"
+  ],
+  "main": "src/AnimatedCheckmark.vue",
+  "module": "src/AnimatedCheckmark.vue",
+  "repository": "https://github.com/Crystal-Creations-GbR/servely-animated-checkmark",
+  "dependencies": {
+    "vue-property-decorator": "^9.1.2"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "prettier": "^2.6.1"
+  }
+}
