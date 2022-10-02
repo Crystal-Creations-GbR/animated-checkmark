@@ -1,4 +1,4 @@
-name: Lint and release
+name: Build and release
 on:
   push:
     branches: [main, beta]
@@ -7,8 +7,8 @@ on:
       - published
 
 jobs:
-  lint:
-    name: Lint
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -41,6 +41,8 @@ jobs:
         run: npm ci --prefer-offline --no-audit
       - name: Lint
         run: npm run lint
+      - name: Build
+        run: npm run build
   semantic-release:
     if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/beta' }}
     name: Create a semantic release
@@ -80,6 +82,8 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --prefer-offline --no-audit
+      - name: Build
+        run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}

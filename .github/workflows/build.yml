@@ -1,4 +1,4 @@
-name: Lint
+name: Build
 on:
   push:
     branches: [next]
@@ -6,8 +6,8 @@ on:
     branches: [main, beta, next]
 
 jobs:
-  lint:
-    name: Lint
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -40,3 +40,5 @@ jobs:
         run: npm ci --prefer-offline --no-audit
       - name: Lint
         run: npm run lint
+      - name: Build
+        run: npm run build
