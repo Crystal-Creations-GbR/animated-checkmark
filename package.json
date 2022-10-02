@@ -6,7 +6,9 @@
   "description": "A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts",
   "scripts": {
     "lint": "eslint src/** --max-warnings 0",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "build": "rollup -c",
+    "prepare": "npm run build"
   },
   "keywords": [
     "checkmark",
@@ -16,23 +18,37 @@
   "homepage": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "bugs": "https://github.com/Crystal-Creations-GbR/animated-checkmark/issues",
   "files": [
-    "src"
+    "lib"
   ],
-  "main": "src/AnimatedCheckmark.vue",
-  "module": "src/AnimatedCheckmark.vue",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
-  "dependencies": {
-    "vue-property-decorator": "^9.1.2"
-  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
+    "@vue/compiler-sfc": "^3.2.40",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^8.7.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "rollup": "^2.23.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "typescript": "^4.8.4",
+    "vue": "^2.7.10",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^9.1.2",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.10",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^9.1.2"
   }
 }

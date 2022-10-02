@@ -10,7 +10,7 @@ A checkmark animation wrapped in a Vue component based on a [codepen](https://co
 
 2. Add the following to your Vue `main.ts`.
     ```ts
-    import AnimatedCheckmark from "@crystal-creations/animated-checkmark";
+    import { AnimatedCheckmark } from "@crystal-creations/animated-checkmark";
     
     // ...
     
