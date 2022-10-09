@@ -39,7 +39,6 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       :stroke="color"
       stroke-width="2"
       stroke-linecap="round"
-      fill="transparent"
     />
     <polyline
       class="success-animation-check"
@@ -47,7 +46,6 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       :stroke="color"
       stroke-width="2"
       points="23 34 34 43 47 27"
-      fill="transparent"
     />
   </svg>
 </template>
@@ -143,14 +141,17 @@ export default class AnimatedCheckmark extends Vue {
 
   .success-animation-circle {
     stroke-dasharray: $circle-length $circle-length;
+    fill: transparent !important;
   }
 
   .success-animation-check {
     stroke-dasharray: $check-length $check-length;
+    fill: transparent !important;
   }
 
   .success-animation-result {
     opacity: 0;
+    stroke: transparent !important;
   }
 
   &.animated {
