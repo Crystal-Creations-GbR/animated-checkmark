@@ -24,7 +24,7 @@
   "module": "lib/index.esm.js",
   "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
