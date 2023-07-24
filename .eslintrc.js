@@ -3,16 +3,10 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: [
-    "plugin:vue/essential",
-    "eslint:recommended",
-    "@vue/typescript/recommended",
-    "@vue/prettier",
-    "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier",
-  ],
+  extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
   parserOptions: {
     ecmaVersion: 2020,
+    sourceType: "module",
   },
   rules: {
     "no-console":

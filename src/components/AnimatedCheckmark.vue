@@ -50,11 +50,11 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   </svg>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-
-@Component
-export default class AnimatedCheckmark extends Vue {
+<script setup lang="ts">
+/**
+ * A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts.
+ */
+const props = defineProps({
   /**
    * The color of the checkmark.
    *
@@ -68,19 +68,19 @@ export default class AnimatedCheckmark extends Vue {
    *
    * If not set, it will be white.
    */
-  @Prop({ default: "white" }) color!: string;
+  color: { type: String, default: "white" },
+});
 
-  /**
-   * Returns the css-class to set for every svg-component.
-   *
-   * The class is the set {@link color}, if the regex /^[a-zA-Z_-]*$/ matches.
-   */
-  get colorClass(): string {
-    if (this.color && this.color.match(/^[a-zA-Z_-]*$/)) {
-      return this.color;
-    }
-    return "";
+/**
+ * Returns the css-class to set for every svg-component.
+ *
+ * The class is the set {@link color}, if the regex /^[a-zA-Z_-]*$/ matches.
+ */
+function colorClass(): string {
+  if (props.color && props.color.match(/^[a-zA-Z_-]*$/)) {
+    return props.color;
   }
+  return "";
 }
 </script>
 
