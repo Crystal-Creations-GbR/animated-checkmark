@@ -3,7 +3,32 @@
 
 A checkmark animation wrapped in a Vue component based on a [codepen](https://codepen.io/simonwuyts/pen/mmMYzx) by Simon Wuyts.
 
-## Usage
+## Usage in nuxt 3
+1. Install with
+
+   `npm install @crystal-creations/animated-checkmark`
+
+2. Add the following to your `nuxt.config.ts`.
+    ```ts
+    export default defineNuxtConfig({
+      app: {
+        // ...
+        modules: [
+          // ...
+          "@crystal-creations/animated-checkmark/nuxt",
+        ],
+      },
+    });
+    ```
+
+3. Add the component to your Vue component.
+    ```vue
+    <template>
+      <AnimatedCheckmark></AnimatedCheckmark>
+    </template>
+    ```
+
+## Usage in vue 3
 1. Install with
 
    `npm install @crystal-creations/animated-checkmark`
