@@ -3,7 +3,11 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
+  extends: [
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
+  ],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
@@ -11,7 +15,12 @@ module.exports = {
   rules: {
     "no-console":
       process.env.NODE_ENV === "production"
-        ? ["error", { allow: ["warn", "error"] }]
+        ? [
+            "error",
+            {
+              allow: ["warn", "error"],
+            },
+          ]
         : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
   },
