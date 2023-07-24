@@ -5,10 +5,11 @@
   "license": "MIT",
   "description": "A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts",
   "scripts": {
-    "lint": "eslint src/** --max-warnings 0",
+    "lint": "eslint src/**/* --max-warnings 0",
     "semantic-release": "semantic-release",
-    "build": "rollup -c",
-    "prepare": "npm run build"
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "vite preview"
   },
   "keywords": [
     "checkmark",
@@ -18,37 +19,37 @@
   "homepage": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "bugs": "https://github.com/Crystal-Creations-GbR/animated-checkmark/issues",
   "files": [
-    "lib"
+    "dist"
   ],
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
-    "@typescript-eslint/parser": "^5.48.1",
-    "@vue/compiler-sfc": "^3.2.45",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^10.0.0",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^8.7.1",
-    "prettier": "^2.8.3",
-    "rollup": "^2.23.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "rollup-plugin-vue": "^5.1.9",
-    "typescript": "^4.9.4",
-    "vue": "^2.7.14",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^9.1.2",
-    "vue-template-compiler": "^2.7.14"
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.mjs"
+    },
+    "./styles": {
+      "default": "./dist/style.css"
+    }
   },
+  "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "peerDependencies": {
-    "vue": "^2.7.14",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^9.1.2"
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/node": "^20.4.4",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.15.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.6",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.3.1",
+    "vue": "^3.0.0"
   }
 }

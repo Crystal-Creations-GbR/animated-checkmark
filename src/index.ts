@@ -1,3 +1,3 @@
-import AnimatedCheckmark from "./AnimatedCheckmark.vue";
+import AnimatedCheckmark from "./components/AnimatedCheckmark.vue";
 
 export { AnimatedCheckmark };
