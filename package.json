@@ -12,7 +12,8 @@
     "serve": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "commitlint": "commitlint"
   },
   "keywords": [
     "checkmark",
@@ -45,6 +46,8 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@nuxt/kit": "^3.6.5",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@semantic-release/exec": "^5.0.0",
