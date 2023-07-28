@@ -1,7 +1,7 @@
 name: Build
 on:
   push:
-    branches: [updates, next]
+    branches: [updates]
   pull_request:
     branches: [main, beta, updates, next]
 
