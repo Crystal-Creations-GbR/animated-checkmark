@@ -8,6 +8,9 @@ const meta: Meta<typeof AnimatedCheckmark> = {
       control: { type: "color", presetColors: ["red", "green", "blue"] },
     },
   },
+  parameters: {
+    chromatic: { pauseAnimationAtEnd: true },
+  },
 };
 
 export default meta;
