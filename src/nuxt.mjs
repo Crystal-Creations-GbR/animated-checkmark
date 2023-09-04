@@ -6,7 +6,7 @@ export default defineNuxtModule({
 
     await addComponent({
       name: "AnimatedCheckmark",
-      filePath: resolver.resolve("src/components/AnimatedCheckmark.vue"),
+      filePath: resolver.resolve("components/AnimatedCheckmark.vue"),
     });
   },
 });
