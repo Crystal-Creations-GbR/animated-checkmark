@@ -25,7 +25,7 @@
   "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "@vue/compiler-sfc": "^3.2.45",
