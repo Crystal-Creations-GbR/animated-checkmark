@@ -2,7 +2,7 @@ name: Release current next version as beta version
 on: workflow_dispatch
 
 jobs:
-  sync_beta_to_main:
+  sync_next_to_beta:
     name: Push `next` to `beta`
     runs-on: ubuntu-latest
     steps:
