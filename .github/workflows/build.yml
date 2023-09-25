@@ -58,4 +58,4 @@ jobs:
       - name: Checkout sha
         run: git checkout ${{ github.head_ref }}
       - name: Lint commit messages
-        run: yarn commitlint -- --from=${{ github.base_ref }} --to=${{ github.head_ref }}
+        run: yarn commitlint --from=${{ github.base_ref }} --to=${{ github.head_ref }}
