@@ -26,8 +26,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   >
     <path
       class="success-animation-result"
-      :class="colorClass"
-      :fill="color"
+      :style="style"
       d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"
     />
     <circle
@@ -35,15 +34,13 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       cx="35"
       cy="35"
       r="24"
-      :class="colorClass"
-      :stroke="color"
+      :style="style"
       stroke-width="2"
       stroke-linecap="round"
     />
     <polyline
       class="success-animation-check"
-      :class="colorClass"
-      :stroke="color"
+      :style="style"
       stroke-width="2"
       points="23 34 34 43 47 27"
     />
@@ -51,6 +48,8 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+
 /**
  * A checkmark animation wrapped in a Vue component based on a codepen by Simon Wuyts.
  */
@@ -58,30 +57,14 @@ const props = defineProps({
   /**
    * The color of the checkmark.
    *
-   * Valid colors are:
-   * - Available CSS-colors (for example: white, #000, etc.)
-   * - Any custom CSS-class (a-zA-Z_-).
-   *
-   * If the color is an CSS-class, this class has to set the following properties:
-   * - fill: [color]
-   * - stroke: [color]
-   *
-   * If not set, it will be white.
+   * Defaults to white.
    */
   color: { type: String, default: "white" },
 });
 
-/**
- * Returns the css-class to set for every svg-component.
- *
- * The class is the set {@link color}, if the regex /^[a-zA-Z_-]*$/ matches.
- */
-function colorClass(): string {
-  if (props.color && props.color.match(/^[a-zA-Z_-]*$/)) {
-    return props.color;
-  }
-  return "";
-}
+const style = computed(() => {
+  return `stroke: ${props.color}; fill: ${props.color};`;
+});
 </script>
 
 <style lang="scss" scoped>
