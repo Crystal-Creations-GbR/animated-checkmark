@@ -63,7 +63,9 @@ const props = defineProps({
 });
 
 const style = computed(() => {
-  return `stroke: ${props.color}; fill: ${props.color};`;
+  return `stroke: rgb(var(--v-theme-${props.color}));
+          fill: rgb(var(--v-theme-${props.color}));
+          stroke: ${props.color}; fill: ${props.color};`;
 });
 </script>
 
