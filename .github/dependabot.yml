@@ -24,6 +24,20 @@ updates:
     allow:
       - dependency-type: "development"
     versioning-strategy: increase
+    groups:
+      commitlint:
+        patterns:
+          - "@commitlint/*"
+          - "conventional-changelog-conventionalcommits"
+      semantic-release:
+        patterns:
+          - "semantic-release"
+          - "@semantic-release/*"
+      storybook:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
+          - "chromatic"
 
   - package-ecosystem: "github-actions"
     directory: "/"
