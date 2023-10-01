@@ -143,12 +143,14 @@ const style = computed(() => {
     animation: 1s ease-out 0s 1 both scaleAnimation;
 
     .success-animation-circle {
-      animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+      animation:
+        1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
         0.3s linear 0.9s 1 both fadeOut;
     }
 
     .success-animation-check {
-      animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+      animation:
+        1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
         0.3s linear 0.9s 1 both fadeOut;
     }
 
