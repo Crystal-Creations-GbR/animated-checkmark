@@ -1,7 +1,7 @@
 import { defineNuxtModule, createResolver, addComponent } from "@nuxt/kit";
 
 export default defineNuxtModule({
-  async setup(options, nuxt) {
+  async setup() {
     const resolver = createResolver(import.meta.url);
 
     await addComponent({
