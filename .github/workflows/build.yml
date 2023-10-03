@@ -29,6 +29,7 @@ jobs:
         run: yarn lint
       - name: Build
         run: yarn build
+
   commitlint:
     if: ${{ github.event_name == 'pull_request' }}
     name: Lint commit messages
