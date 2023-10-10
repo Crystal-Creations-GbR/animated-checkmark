@@ -3,7 +3,7 @@ on: push
 
 jobs:
   chromatic_deployment:
-    name: Build
+    name: Deploy storybook to chromatic
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

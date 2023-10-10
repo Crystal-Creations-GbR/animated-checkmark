@@ -56,6 +56,8 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -65,6 +67,7 @@ jobs:
           GIT_COMMITTER_EMAIL: ${{ secrets.BUMP_GIT_EMAIL }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn semantic-release
+
   sync_main_to_beta:
     if: ${{ github.ref == 'refs/heads/main' }}
     name: Sync branch `main` to `beta` (fast-forward enabled)
@@ -78,6 +81,7 @@ jobs:
           git_committer_name: ${{ secrets.BUMP_GIT_NAME }}
           git_committer_email: ${{ secrets.BUMP_GIT_EMAIL }}
           github_token: ${{ secrets.GH_TOKEN }}
+
   sync_beta_to_next:
     if: ${{ github.ref == 'refs/heads/beta' }}
     name: Sync branch `beta` to `next` (fast-forward enabled)
@@ -92,6 +96,7 @@ jobs:
           git_committer_name: ${{ secrets.BUMP_GIT_NAME }}
           git_committer_email: ${{ secrets.BUMP_GIT_EMAIL }}
           github_token: ${{ secrets.GH_TOKEN }}
+
   sync_beta_to_updates:
     if: ${{ github.ref == 'refs/heads/beta' }}
     name: Sync branch `beta` to `updates` (fast-forward enabled)
