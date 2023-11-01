@@ -48,8 +48,8 @@
     "vuetify": "^3.3.19"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
     "@nuxt/kit": "^3.7.4",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@semantic-release/exec": "^6.0.3",
