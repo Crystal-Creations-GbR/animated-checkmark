@@ -45,7 +45,7 @@
   "repository": "https://github.com/Crystal-Creations-GbR/animated-checkmark",
   "peerDependencies": {
     "vue": "^3.0.0",
-    "vuetify": "^3.3.19"
+    "vuetify": "^3.4.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -80,6 +80,6 @@
     "vite": "^4.4.9",
     "vite-plugin-dts": "^3.6.0",
     "vue": "^3.0.0",
-    "vuetify": "^3.3.19"
+    "vuetify": "^3.4.4"
   }
 }
